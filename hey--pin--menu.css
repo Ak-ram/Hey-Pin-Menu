@@ -1,0 +1,58 @@
+.position-absolute {
+  position: absolute;
+}
+
+.ticket-effect {
+  box-shadow: 0 0 5px 0px #222222e0;
+}
+.ticket-effect:hover {
+  filter: invert(1);
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: end;
+  background: #f5db21fa;
+}
+
+.container {
+  width: 220px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: end;
+  perspective: 100px;
+  filter: drop-shadow(2px 4px 6px black);
+}
+.container .ticket {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 10px;
+  padding: 2px 7px;
+  transition: all 0.3s;
+  background: #e3e0e0;
+  transform-origin: right bottom;
+  cursor: pointer;
+  width: 100%;
+}
+.container .ticket img {
+  width: 30px;
+  border-radius: 50%;
+  filter: hue-rotate(45deg);
+}
+.container .ticket .ticket-content h4, .container .ticket .ticket-content p {
+  margin: 3px 0;
+  font-family: system-ui;
+}
+.container .ticket .ticket-content p {
+  font-size: 14px;
+  font-family: "Amiri";
+  font-weight: bold;
+}
